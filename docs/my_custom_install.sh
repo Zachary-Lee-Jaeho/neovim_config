@@ -222,7 +222,7 @@ if [[ -d "$NVIM_CONFIG_DIR" ]]; then
     mv "$NVIM_CONFIG_DIR" "$NVIM_CONFIG_DIR.backup"
 fi
 
-git clone --depth=1 https://github.com/jdhao/nvim-config.git "$NVIM_CONFIG_DIR"
+git clone --depth=1 https://github.com/mangotasty/neovim_config.git "$NVIM_CONFIG_DIR"
 
 echo "Installing packer.nvim"
 git clone --depth=1 https://github.com/wbthomason/packer.nvim \
