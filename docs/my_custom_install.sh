@@ -110,6 +110,8 @@ NODE_LINK="https://nodejs.org/dist/v17.2.0/node-v17.2.0-linux-x64.tar.xz"
 
     if [[ "$ADD_TO_SYSTEM_PATH" = true ]] && [[ "$USE_BASH_SHELL" = true ]]; then
         echo "export PATH=\"$NODE_DIR/bin:\$PATH\"" >> "$HOME/.bash_profile"
+    else
+        echo "export PATH=\"$NODE_DIR/bin:\$PATH\"" >> "$HOME/.zshrc"
     fi
 # else
 #     echo "Nodejs is already installed. Skip installing it."
@@ -145,6 +147,8 @@ if [[ -z "$(command -v rg)" ]] && [[ ! -f "$RIPGREP_DIR/rg" ]]; then
 
     if [[ "$ADD_TO_SYSTEM_PATH" = true ]] && [[ "$USE_BASH_SHELL" = true ]]; then
         echo "export PATH=\"$RIPGREP_DIR:\$PATH\"" >> "$HOME/.bash_profile"
+    else
+        echo "export PATH=\"$RIPGREP_DIR:\$PATH\"" >> "$HOME/.zshrc"
     fi
 
     # set up manpath and zsh completion for ripgrep
@@ -183,6 +187,8 @@ if [[ ! -f "$CTAGS_DIR/bin/ctags" ]]; then
 
     if [[ "$ADD_TO_SYSTEM_PATH" = true ]] && [[ "$USE_BASH_SHELL" = true ]]; then
         echo "export PATH=\"$CTAGS_DIR/bin:\$PATH\"" >> "$HOME/.bash_profile"
+    else
+        echo "export PATH=\"$CTAGS_DIR/bin:\$PATH\"" >> "$HOME/.zshrc"
     fi
 else
     echo "ctags is already installed. Skip installing it."
@@ -212,6 +218,8 @@ if [[ ! -f "$NVIM_DIR/bin/nvim" ]]; then
 
     if [[ "$ADD_TO_SYSTEM_PATH" = true ]] && [[ "$USE_BASH_SHELL" = true ]]; then
         echo "export PATH=\"$NVIM_DIR/bin:\$PATH\"" >> "$HOME/.bash_profile"
+    else
+        echo "export PATH=\"$NVIM_DIR/bin:\$PATH\"" >> "$HOME/.zshrc"
     fi
 else
     echo "Nvim is already installed. Skip installing it."
